@@ -1,0 +1,11 @@
+public class LuasLingkaran{
+    static double luasLingkaran(double jariJari){
+        return Math.PI * jariJari * jariJari;
+    }
+    public static void main(String[] args){
+        System.out.println("menghitung luas lingkaran");
+        System.out.printf("jari-jari 7  : %.2f%n", luasLingkaran(7));
+        System.out.printf("jari-jari 10 : %.2f%n", luasLingkaran(10));
+        System.out.printf("jari-jari 14 : %.2f%n", luasLingkaran(14));
+    }
+}
