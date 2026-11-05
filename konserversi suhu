@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class KonversiSuhu{
+    static double konversiCelsiusKeFahrenheit(double c){
+        return (c * 9 / 5) + 32;
+    }
+    static double konversiFahrenheitKeCelsius(double f){
+        return (f - 32) * 5 / 9;
+    }
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        int pilihan;
+        do {
+            System.out.println("\n===== KONVERSI SUHU =====");
+            System.out.println("1. celsius ke fahrenheit");
+            System.out.println("2. fahrenheit ke celsius");
+            System.out.println("0. keluar");
+            System.out.print("pilih menu:");
+            pilihan = input.nextInt();
+            if(pilihan == 1){
+                System.out.print("masukkan suhu celsius:");
+                double c = input.nextDouble();
+                double hasil = konversiCelsiusKeFahrenheit(c);
+                System.out.println("hasil:" + hasil +" fahrenheit");
+            } else if(pilihan == 2){
+                System.out.print("masukkan suhu fahrenheit:");
+                double f = input.nextDouble();
+                double hasil = konversiFahrenheitKeCelsius(f);
+                System.out.println("hasil:" + hasil +" celsius");
+            } else if(pilihan == 0){
+                System.out.println("terima kasih.");
+            } else {
+                System.out.println("pilihan tidak tersedia!");
+            }
+        } while(pilihan != 0);
+        input.close();
+    }
+}
